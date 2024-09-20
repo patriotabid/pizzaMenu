@@ -1,12 +1,14 @@
-function Pizza(props) {
+function Pizza({ pizzaObj }) {
+  // if (pizzaObj.soldOut) return null; // this called "early return"
+
   return (
-    <li className="pizza">
-      <img src={props.data.photoName} alt={props.data.name} />
+    <li className={`pizza ${pizzaObj.soldOut && "pizza sold-out"}`}>
+      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
 
       <div>
-        <h3>{props.data.name}</h3>
-        <p>{props.data.ingredients}</p>
-        <span>{props.data.price}</span>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
       </div>
     </li>
   );
