@@ -3,8 +3,6 @@ import pizzaData from "../../data.js";
 
 function Menu() {
   const pizzasLength = pizzaData.length;
-  // const pizzasLength = 0;
-  // const isTherePizza = pizzaData.every((pizza) => !pizza.soldOut); use it in the feature !!!
 
   return (
     <main className="menu">

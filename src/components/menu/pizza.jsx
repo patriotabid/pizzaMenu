@@ -1,6 +1,4 @@
 function Pizza({ pizzaObj }) {
-  // if (pizzaObj.soldOut) return null; // this called "early return"
-
   return (
     <li className={`pizza ${pizzaObj.soldOut && "pizza sold-out"}`}>
       <img src={pizzaObj.photoName} alt={pizzaObj.name} />
